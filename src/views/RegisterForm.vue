@@ -195,7 +195,7 @@ export default {
                c_password: this.c_password
             }
       
-            axios.post('http://127.0.0.1:8000/api/register', data)
+            axios.post('https://sjecmsbe.herokuapp.com/api/register', data)
                 .then(
                     res => {
                         console.log(res)

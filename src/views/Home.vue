@@ -189,7 +189,7 @@ export default {
     const headers = { 
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     };
-    axios.post("http://127.0.0.1:8000/api/details", {}, { headers })
+    axios.post("https://sjecmsbe.herokuapp.com/api/details", {}, { headers })
       .then(response => {
         this.user = response.data.success;
         console.log(response.data.success);
@@ -213,7 +213,7 @@ export default {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
 
-       axios.put(`http://127.0.0.1:8000/api/useroutside/${this.user.email}`,{email: this.user.email}, {headers})
+       axios.put(`https://sjecmsbe.herokuapp.com/api/useroutside/${this.user.email}`,{email: this.user.email}, {headers})
        .then(confirm('Out successfully!!'))
        .catch(function (error) {
         console.error(error.response);

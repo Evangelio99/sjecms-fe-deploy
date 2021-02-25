@@ -105,7 +105,7 @@ export default {
   methods: {
     initialize () {
     const that = this
-    axios.post("http://127.0.0.1:8000/api/displaysurvey", {})
+    axios.post("https://sjecmsbe.herokuapp.com/api/displaysurvey", {})
     .then(response => {
       console.log(response.data)
       that.survey = response.data.success

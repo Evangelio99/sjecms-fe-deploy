@@ -100,7 +100,7 @@ export default {
   methods : {
     handleSubmit(e){
       e.preventDefault()
-         axios.post(`http://127.0.0.1:8000/api/reset_password/${this.email}/${this.code}`, {
+         axios.post(`https://sjecmsbe.herokuapp.com/api/reset_password/${this.email}/${this.code}`, {
             password: this.password,
             c_password: this.c_password
           }).then( response => {

@@ -112,7 +112,7 @@ export default {
       e.preventDefault()
       const that = this
       if (this.password.length > 0) {
-          axios.post('http://127.0.0.1:8000/api/login', {
+          axios.post('https://sjecmsbe.herokuapp.com/api/login', {
             email: this.email,
             password: this.password
           })

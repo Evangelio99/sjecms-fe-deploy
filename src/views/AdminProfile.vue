@@ -155,7 +155,7 @@ export default {
   methods: {
       initialize () {
       const that = this
-      axios.post("http://127.0.0.1:8000/api/adminview", {})
+      axios.post("https://sjecmsbe.herokuapp.com/api/adminview", {})
       .then(response => {
         console.log(response.data)
         that.survey = response.data.success
@@ -197,7 +197,7 @@ export default {
           if(this.editedIndex > -1){
             confirm('Are you sure you want to save your changes?') 
             && 
-            axios.put(`http://127.0.0.1:8000/api/adminupdate/${ that.get_id }`,{
+            axios.put(`https://sjecmsbe.herokuapp.com/api/adminupdate/${ that.get_id }`,{
               first_name: get_firstname,
               last_name: get_lastname,
               gender: get_gender,
@@ -214,7 +214,7 @@ export default {
             });
             this.initialize()
           }else{
-              axios.post('http://127.0.0.1:8000/api/register', {
+              axios.post('https://sjecmsbe.herokuapp.com/api/register', {
                 first_name: get_firstname,
                 last_name: get_lastname,
                 gender: get_gender,
@@ -245,7 +245,7 @@ export default {
         this.editedItem = Object.assign({}, item)
         this.get_id = Object.assign({}, item).id
         confirm('Are you sure you want to delete this item?') && 
-        axios.delete(`http://127.0.0.1:8000/api/delete/${ that.get_id }`, {})
+        axios.delete(`https://sjecmsbe.herokuapp.com/api/delete/${ that.get_id }`, {})
         .then(response => {
           console.log(response)
           console.log(`user ${ that.get_id } info is deleted successfully!`)

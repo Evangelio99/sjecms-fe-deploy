@@ -47,7 +47,7 @@
 
     methods: {
         fetchData(){
-            axios.get('http://127.0.0.1:8000/api/estmonitor')
+            axios.get('https://sjecmsbe.herokuapp.com/api/estmonitor')
             .then(response=>{
                 console.log(response);
                 this.details = response.data;

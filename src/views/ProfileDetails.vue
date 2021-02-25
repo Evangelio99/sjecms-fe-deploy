@@ -84,7 +84,7 @@ export default {
         const headers = { 
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         };
-        axios.post("http://127.0.0.1:8000/api/details/", {}, { headers })
+        axios.post("https://sjecmsbe.herokuapp.com/api/details/", {}, { headers })
           .then(response => {
             this.user = response.data.success;
             console.log(response.data.success);

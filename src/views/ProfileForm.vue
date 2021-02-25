@@ -171,7 +171,7 @@ import axios from 'axios'
       const headers = { 
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     };
-    axios.post("http://127.0.0.1:8000/api/details", {}, { headers })
+    axios.post("https://sjecmsbe.herokuapp.com/api/details", {}, { headers })
       .then(response => {
         this.user = response.data.success;
         this.first_name = response.data.success.first_name;
@@ -202,7 +202,7 @@ import axios from 'axios'
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
               };
 
-              axios.put('http://127.0.0.1:8000/api/update', data, { headers })
+              axios.put('https://sjecmsbe.herokuapp.com/api/update', data, { headers })
               .then(
                     res => {
                         console.log(res)

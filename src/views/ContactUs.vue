@@ -136,7 +136,7 @@ export default {
     methods: {
       handlesubmit(e){
         e.preventDefault()
-        axios.post('http://127.0.0.1:8000/api/contact-us', {
+        axios.post('https://sjecmsbe.herokuapp.com/api/contact-us', {
             name: this.name,
             email: this.email,
             message: this.message

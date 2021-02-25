@@ -76,7 +76,7 @@ export default {
   methods : {
     handleSubmit(e){
       e.preventDefault()
-         axios.post('http://127.0.0.1:8000/api/forgot_password', {
+         axios.post('https://sjecmsbe.herokuapp.com/api/forgot_password', {
             email : this.email,
           }).then( response => {
              console.log(response.data)

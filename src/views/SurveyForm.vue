@@ -247,7 +247,7 @@ export default {
 
     methods : {
     post ({model, body, objectFunction, errorFunction, headers}) {
-      axios.post(`http://localhost:8000/api/${model}`, body, headers).then(objectFunction).catch(errorFunction)
+      axios.post(`https://sjecmsbe.herokuapp.com/api/${model}`, body, headers).then(objectFunction).catch(errorFunction)
     },
 
     handleSubmit(e){
@@ -302,7 +302,7 @@ export default {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       };
 
-      axios.post("http://127.0.0.1:8000/api/details/", {}, { headers })
+      axios.post("https://sjecmsbe.herokuapp.com/api/details/", {}, { headers })
       .then(response => {
         this.first_name = response.data.success.first_name;
         this.last_name = response.data.success.last_name;
@@ -314,7 +314,7 @@ export default {
 
     submitform() {
       const that = this
-      axios.post('http://127.0.0.1:8000/api/userforms', {
+      axios.post('https://sjecmsbe.herokuapp.com/api/userforms', {
         estID: this.estID,
         first_name: this.first_name,
         last_name: this.last_name,
@@ -336,7 +336,7 @@ export default {
     },
 
     increment(){
-      axios.put('http://127.0.0.1:8000/api/estmonitor/formcreated', {
+      axios.put('https://sjecmsbe.herokuapp.com/api/estmonitor/formcreated', {
         estID: this.estID
       })
 
@@ -348,7 +348,7 @@ export default {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
 
-       axios.put(`http://127.0.0.1:8000/api/userinside/${this.email}`, {email: this.email}, {headers})
+       axios.put(`https://sjecmsbe.herokuapp.com/api/userinside/${this.email}`, {email: this.email}, {headers})
     }
   },
 
